@@ -1,81 +1,31 @@
-# Data Sets Overview
+# Violation Detection Code
 
-### Health inspection results
-*DC Restaurant Inspection data*
-http://opendatadc.org/dataset/restaurant-inspection-data
+## Overview
 
-Contains information on type of facility being inspected, as well as historical information on health inspections for 3 years.
+This repository contains code for detecting possible violations using two main approaches:
 
-Data pull complete, organizing/ cleaning data
+1. **Past Event Analysis**: In this part of the code, we analyze historical data to assess the possibility of a violation occurring. By examining patterns and trends from past events, we aim to identify situations that might lead to violations. This analysis can provide valuable insights into potential risks.
 
-### Weather (temperature over the previous 3 days):
+2. **Sanitary Conditions Assessment**: The second part of the code focuses on evaluating sanitary conditions in specific areas. It checks whether the conditions in a given location meet certain criteria. If the conditions do not meet the required standards, it may indicate a potential violation of regulations or guidelines.
 
-*ASOS Network*
-http://mesonet.agron.iastate.edu/request/download.phtml?network=MD_ASOS
+## Code Structure
 
-Good for pulling in static historical data; would need more work to automate daily pulls
+The code is organized into two main sections:
 
-*Wunderground*
-http://wunderground.com
+### 1. Past Event Analysis
 
-Historical data for previous 3 days can be pulled automatically and dynamically via R (investigate if python is an option)
- 
-Instructions for R can be found here: http://allthingsr.blogspot.com/2012/04/getting-historical-weather-data-in-r.html
+This script contains the code for analyzing historical data and assessing the likelihood of violations based on past events. It includes functions for data preprocessing, pattern recognition, and risk assessment.
 
-data pull pending
+### 2. Sanitary Conditions Assessment
 
-### 311 Service Requests
+ This script is responsible for evaluating the sanitary conditions in specific areas. It defines criteria and checks whether the conditions in a given location meet those criteria. Any deviations from the standards are flagged as potential violations.
 
-*DC 311 requests database*
-http://opendata.dc.gov/datasets/14faf3d4bfbe4ca4a713bf203a985151_0?geometry=-77.784%2C38.745%2C-76.136%2C39.065&orderByFields=ADDDATE+ASC&filterByExtent=false
+## Getting Started
 
-Data to look for in this set:  
-* Nearby garbage and sanitation complaints  
-* Sewer overflow/ line breaks  
-* Water line breaks  
-* Rodent/ pest complaints  
+To use the code for violation detection, follow these steps:
 
-**Notes:** data is only available for last 30 days. First pull -  5/23/16 1633
+1. Clone the repository to your local machine:
 
-historical data has been pulled from here as of 5/30/2016- http://dev.seeclickfix.com/
-attempt was made to retrieve data from 4/1/2013 forward. Need to verify data pull. Data currently stored in MongoDB
+   ```shell
+   git clone https://github.com/your_username/violation-detection.git
 
-### Nearby burglaries
-
-*DC Crime Data*
-http://opendata.dc.gov/datasets?q=crime+incidents&sort_by=relevance
-
-**Notes:** All available data downloaded 5/25/16 1101 (2012- 5/25)
-
-### Alcohol consumption license 
-
-*DC Alcoholic Beverage Regulation Administration (ABRA)*
-http://opendata.dc.gov/datasets/cabe9dcef0b344518c7fae1a3def7de1_5
-
-**Notes:** Downloaded 5/25/16
-
-### Length of time establishment has been operating
-
-*DCRA Business License Data*
-http://opendata.dc.gov/datasets?q=basic+business+license&sort_by=relevance
-
-**Notes:** downloaded 5/25/16. Need to explore the utility of the data.
-
-
-### Permits for residential or commercial construction
-
-*DDOT Tops*
-http://opendata.dc.gov/datasets/fc7da7bd29d4493481b17d032e117d09_0
-
-**Notes:** downloaded 5/25/16, last update of records- 5/1/16. Recheck on 6/1
-
-### Age of building
-
-This data is not available for mass downlaod and will be considered optional, pending time availability. 
-
-Look into - Building Permits Database by Brian Kraft. Housed in Washintoniana collect fo DCPL for Histoic data http://dclibrary.org/node/35928
-
-### Yelp
-
-Data initially downloaded 6/1/2016
-Needs to be updated once Health Inspection results are ready.
