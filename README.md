@@ -4,7 +4,7 @@
 
 This repository contains code for detecting possible violations using two main approaches:
 
-1. **Past Event Analysis**: In this part of the code, we analyze historical data to assess the possibility of a violation occurring. By examining patterns and trends from past events, we aim to identify situations that might lead to violations. This analysis can provide valuable insights into potential risks.
+1. **Past Event Analysis**: In this part of the code, we analyze historical data to assess the possibility of a violation occurring. To do this, I used the 3 datasets, clubbed them into 1 dataset and then performed NN based on other classification-based models. To handle the class imbalance I used focal loss here.
 
 2. **Sanitary Conditions Assessment**: The second part of the code focuses on evaluating sanitary conditions in specific areas. It checks whether the conditions in a given location meet certain criteria. If the conditions do not meet the required standards, it may indicate a potential violation of regulations or guidelines.
 
